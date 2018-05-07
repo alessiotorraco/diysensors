@@ -1,5 +1,5 @@
 # diysensors
-DIY Sensors team project: turn citizens into data provider. 
+DIY Sensors Team project: turn citizens into data provider. 
 Built by alessio.torraco@esa.int with the contribution of joakim.adrup@esa.int and diana.mastracci@esa.int.
 
 Code written by alessio.torraco@esa.int, demo version proposed at GEOSS/HACK 2018 organized by diana.mastracci@esa.int
