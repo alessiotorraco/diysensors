@@ -19,11 +19,11 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BMP280.h> //https://github.com/adafruit/Adafruit_BMP280_Library
 
-//  Sensors pins and global variables - to be moved and optimized
-#define DHTPIN 2    // DHT22 is connected to D2
-#define DHTTYPE DHT22   // Sensor type needed for the library - DHT22 (AM2302)
-DHT dht(DHTPIN, DHTTYPE);   // Initialize DHT sensor for normal 16mhz Arduino
-Adafruit_BMP280 bmp;    // Initialize BMP280 sensor using I2C
+//
+#define DHTPIN 2    
+#define DHTTYPE DHT22   
+DHT dht(DHTPIN, DHTTYPE);   
+Adafruit_BMP280 bmp;    
 #define smokePIN A1
 const int chipSelect = 4;
 int RED = 5;
@@ -78,7 +78,7 @@ float SensorCalibration()
 
 void setup(void) 
 { 
- // Start serial port & sensors
+ //
  Serial.begin(9600);  //9600 baud rate
  serial_connection.begin(9600);
  Serial.println(F("GPS Start"));
@@ -99,7 +99,7 @@ void setup(void)
 void loop(void) 
 {  
   delay(2000);
-  /* TO DO: must add weighted average for each sensor measurement (consistency) */
+  /* TO DO: must add weighted average */
   humidity = dht.readHumidity();
   temperature = dht.readTemperature();
   heatic = dht.computeHeatIndex(temperature, humidity, false);
